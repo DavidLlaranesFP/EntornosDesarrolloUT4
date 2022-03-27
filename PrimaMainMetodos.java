@@ -1,5 +1,14 @@
 import java.util.Scanner;
 
+/**
+ * Problema del cálculo de la prima
+ * 
+ * Se calcula la prima que corresponde a un empleado según una serie de parámetros
+ * Estos parámetros se introducirán por teclado previa petición
+ * 
+ * @version v1.2022
+ * @author David Fernández Muñoz
+ */
 public class PrimaMainMetodos {
 	
 
@@ -29,6 +38,15 @@ public class PrimaMainMetodos {
 	}
 
 
+	/**
+	 * Método estático que halla el tipo de la prima
+	 * @param	char esDirectivo caracter que indica si lo es o no
+	 * @param	int  meses entero que almacena el número de meses de antigüedad del empleado
+	 * @return	String de valor P1 si es directivo y tiene un antigüedad mayor o igual a 12 meses,
+	 * String de valor P2 si no es directivo y tiene una antigüedad mayor o igual a 12 meses
+	 * String de valor P3 si es directivo y tiene una antigüedad menor que 12 meses
+	 * String de valor P4 si no es directivo y tiene una antigüedad menor que 12 meses
+	 */
 	public static String hallarPrima(char esDirectivo, int meses) {
 		if(esDirectivo=='+') // ES DIRECTIVO
 			if(meses>=12)
