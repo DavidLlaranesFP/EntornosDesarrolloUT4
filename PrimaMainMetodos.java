@@ -1,17 +1,24 @@
 import java.util.Scanner;
 
 /**
- * Problema del cálculo de la prima
+ * <h1>Problema del cálculo de la prima</h1>
  * 
- * Se calcula la prima que corresponde a un empleado según una serie de parámetros
- * Estos parámetros se introducirán por teclado previa petición
+ * <p>Se calcula la prima que corresponde a un empleado según una serie de parámetros
+ * Estos parámetros se introducirán por teclado previa petición, siendo validados en el 
+ * proceso de petición</p>
  * 
  * @version v1.2022
  * @author David Fernández Muñoz
  */
+
+
+
 public class PrimaMainMetodos {
 	
 
+	/**
+	 * Variable estática para la entrada de datos por teclado
+	 */
 	static Scanner  teclado=new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -38,14 +45,15 @@ public class PrimaMainMetodos {
 	}
 
 
+
 	/**
 	 * Método estático que halla el tipo de la prima
-	 * @param	char esDirectivo caracter que indica si lo es o no
-	 * @param	int  meses entero que almacena el número de meses de antigüedad del empleado
+	 * @param esDirectivo	char que indica si lo es o no
+	 * @param meses	int que almacena el número de meses de antigüedad del empleado
 	 * @return	String de valor P1 si es directivo y tiene un antigüedad mayor o igual a 12 meses,
-	 * String de valor P2 si no es directivo y tiene una antigüedad mayor o igual a 12 meses
-	 * String de valor P3 si es directivo y tiene una antigüedad menor que 12 meses
-	 * String de valor P4 si no es directivo y tiene una antigüedad menor que 12 meses
+	 *  valor P2 si no es directivo y tiene una antigüedad mayor o igual a 12 meses,
+	 *  valor P3 si es directivo y tiene una antigüedad menor que 12 meses,
+	 *  valor P4 si no es directivo y tiene una antigüedad menor que 12 meses
 	 */
 	public static String hallarPrima(char esDirectivo, int meses) {
 		if(esDirectivo=='+') // ES DIRECTIVO
@@ -60,7 +68,10 @@ public class PrimaMainMetodos {
 				return "P4";
 	}
 
-	
+	/**
+	 * Método que lee el número del empleado y valida que sea un entero positivo de tres dígitos
+	 * @return	int con el número del empleado 
+	 */
 	public static int leerNumEmple() {		
 		int numEmple;
 		do{
@@ -71,7 +82,10 @@ public class PrimaMainMetodos {
 		return numEmple;
 	}
 	
-	
+	/**
+	 * Método que lee el nombre del empleado y valida que no tenga más de diez caracteres
+	 * @return	String con el nombre del empleado
+	 */
 	public static String leerNomEmple() {
 		String nomEmple;
 		do {
@@ -82,6 +96,10 @@ public class PrimaMainMetodos {
 	}
 	
 
+	/**
+	 * Método que lee la antigüedad del empleado en meses y valida que sea un entero positivo o cero
+	 * @return	int con el número de meses de antigüedad del empleado
+	 */
 	public static int leerMeses() {
 		int meses;
 		do {
@@ -93,6 +111,10 @@ public class PrimaMainMetodos {
 	}
 	
 
+	/**
+	 * Método que lee por teclado si el empleado es directivo o no
+	 * @return char de valor '+' si es directivo, '-' si no lo es
+	 */
 	public static char leerEsDirectivo() {
 		char esDirectivo;
 		do {
